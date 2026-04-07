@@ -35,9 +35,7 @@ class User(models.Model):
     birth_date = models.DateField(
         help_text="Fecha de nacimiento."
     )
-    role = models.ForeignKey(
-        Role,
-        on_delete=models.CASCADE,
+    role = models.ForeignKey(Role,on_delete=models.CASCADE,
         related_name='users'
     )
     activo = models.BooleanField(default=True)
